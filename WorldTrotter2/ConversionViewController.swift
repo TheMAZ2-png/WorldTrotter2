@@ -54,19 +54,31 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    
+    
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-
-        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-            let replacementTextHasDecimalSeparator = string.range(of: ".")
-
-            if existingTextHasDecimalSeparator != nil,
-                replacementTextHasDecimalSeparator != nil {
-                return false
-            } else {
-                return true
-            }
+        
+        //Allow back (string will be empty)
+        if string.isEmpty {
+            return true
+        }
+        
+        //Check for existing decimal point
+        let existingTextHasDecimalSeparator = textField.text?.contains(".") ?? false
+        
+        //New input has a decimal point
+        let replacementTextHasDecimalSeparator = string.contains(".")
+        
+        //Catch for multiple decimal points
+        if existingTextHasDecimalSeparator && replacementTextHasDecimalSeparator {
+            return false
+        }
+        
+        //Allowed input characters (0123456789.)
+        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789.")
+        return string.rangeOfCharacter(from: allowedCharacterSet.inverted) == nil
     }
 
     
