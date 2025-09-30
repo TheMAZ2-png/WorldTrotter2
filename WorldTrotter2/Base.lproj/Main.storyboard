@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRN-VT-2Hf">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rV-Dd-Czb">
+                                <rect key="frame" x="49" y="269.33333333333331" width="295" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-6Q-xTg">
+                                <rect key="frame" x="138" y="371.33333333333331" width="117" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsuis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-NV-HRw">
+                                <rect key="frame" x="74.000000000000014" y="463.33333333333331" width="245.33333333333337" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-uC-3Kk">
+                                <rect key="frame" x="139.66666666666666" y="320.33333333333331" width="114" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Value..." textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-qq-dOF">
+                                <rect key="frame" x="92.666666666666671" y="136" width="207.66666666666663" height="85.333333333333314"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YzE-uC-3Kk" firstAttribute="centerX" secondItem="2rV-Dd-Czb" secondAttribute="centerX" id="0uK-a8-rPl"/>
+                            <constraint firstItem="2rV-Dd-Czb" firstAttribute="top" secondItem="hPI-qq-dOF" secondAttribute="bottom" constant="48" id="4hw-ub-5y3"/>
+                            <constraint firstItem="oNT-6Q-xTg" firstAttribute="top" secondItem="YzE-uC-3Kk" secondAttribute="bottom" constant="8" id="Cj6-Ul-D2S"/>
+                            <constraint firstItem="dwf-NV-HRw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEP-zY-x6T"/>
+                            <constraint firstItem="YzE-uC-3Kk" firstAttribute="top" secondItem="2rV-Dd-Czb" secondAttribute="bottom" constant="8" id="Lu0-94-Ce4"/>
+                            <constraint firstItem="dwf-NV-HRw" firstAttribute="centerX" secondItem="2rV-Dd-Czb" secondAttribute="centerX" id="Ox4-If-K6w"/>
+                            <constraint firstItem="YzE-uC-3Kk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UxX-OA-K7f"/>
+                            <constraint firstItem="hPI-qq-dOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAn-MF-QZz"/>
+                            <constraint firstItem="oNT-6Q-xTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c9B-Et-psx"/>
+                            <constraint firstItem="hPI-qq-dOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ghU-sF-9MI"/>
+                            <constraint firstItem="oNT-6Q-xTg" firstAttribute="centerX" secondItem="2rV-Dd-Czb" secondAttribute="centerX" id="iUl-k3-e5B"/>
+                            <constraint firstItem="hPI-qq-dOF" firstAttribute="centerX" secondItem="2rV-Dd-Czb" secondAttribute="centerX" id="lTS-m5-F5c"/>
+                            <constraint firstItem="dwf-NV-HRw" firstAttribute="top" secondItem="oNT-6Q-xTg" secondAttribute="bottom" constant="8" id="qzf-g1-euk"/>
+                            <constraint firstItem="2rV-Dd-Czb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rMI-ih-wON"/>
+                            <constraint firstItem="hPI-qq-dOF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="ue4-3f-B6q"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Convert" image="thermometer.sun" catalog="system" id="yxD-Up-lWg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="152" y="108"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="9ZM-Ly-DJt">
+            <objects>
+                <viewController id="fpN-Ds-Mu2" customClass="MapViewController" customModule="WorldTrotter2" customModuleProvider="target" sceneMemberID="viewController">
+                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points of Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pdp-wQ-lp7" userLabel="Points of Interest">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="7dI-I6-W3T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWW-RG-liP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820.6106870229007" y="130.98591549295776"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8Bh-eD-Gur">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SRN-VT-2Hf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KWh-oV-hpx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="19q-ig-elv"/>
+                        <segue destination="fpN-Ds-Mu2" kind="relationship" relationship="viewControllers" id="pJy-oM-0At"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYY-Q2-CeT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.89312977099235" y="130.98591549295776"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="thermometer.sun" catalog="system" width="104" height="128"/>
+    </resources>
 </document>
