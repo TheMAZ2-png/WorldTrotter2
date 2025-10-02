@@ -59,35 +59,32 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        
-        //Allow back (string will be empty)
-        if string.isEmpty {
+
+
+        let currentLocale = Locale.current
+        let decimalSeparator = currentLocale.decimalSeparator ?? "."
+
+        let existingTextHasDecimalSeparator
+                = textField.text?.range(of: decimalSeparator)
+        let replacementTextHasDecimalSeparator = string.range(of: decimalSeparator)
+
+        if existingTextHasDecimalSeparator != nil,
+            replacementTextHasDecimalSeparator != nil {
+            return false
+        } else {
             return true
         }
-        
-        //Check for existing decimal point
-        let existingTextHasDecimalSeparator = textField.text?.contains(".") ?? false
-        
-        //New input has a decimal point
-        let replacementTextHasDecimalSeparator = string.contains(".")
-        
-        //Catch for multiple decimal points
-        if existingTextHasDecimalSeparator && replacementTextHasDecimalSeparator {
-            return false
-        }
-        
-        //Allowed input characters (0123456789.)
-        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789.")
-        return string.rangeOfCharacter(from: allowedCharacterSet.inverted) == nil
     }
 
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text, let value = Double(text) {
-                fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
-            } else {
-                fahrenheitValue = nil
-            }
+
+        
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
+        } else {
+            fahrenheitValue = nil
+        }
     }
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
