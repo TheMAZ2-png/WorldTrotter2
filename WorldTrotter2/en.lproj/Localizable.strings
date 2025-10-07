@@ -7,11 +7,12 @@
 */
 
 
+
 /* Hybrid map view */
-"Hybrid" =  "Híbrido";
+"Hybrid" = "Hyrbid";
 
 /* Satellite map view */
-"Satellite" = "Satélite";
+"Satellite" = "Satellite";
 
 /* Standard map view */
-"Standard" =  "Estándar";
+"Standard" =  "Standard";
