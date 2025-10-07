@@ -1,1 +1,1 @@
-Ch. 5 + 6, as well as Bronze Challenges for both.
+Added Italian to available languages! This is to build upon Spanish being available, and English. (Ch. 7 Bronze challenge)
